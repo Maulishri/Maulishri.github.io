@@ -1,11 +1,12 @@
  
 ## Overview
-1. The pages are responsive on almost all devices. 
-2. Toggle option between Dark/Light mode is available. 
-3. Project cards have animation on hover.
+Built a personal portfolio such that - 
+1. The pages are responsive on almost all devices
+2. Toggle option between Dark/Light mode is available
+3. Project cards have animation on hover
 
 ### Access data
-The data is stored in data.js file from where it can be edited.
+The data is stored in data.js file from where it can be edited
 ```sh
 src/data.js
 ```
