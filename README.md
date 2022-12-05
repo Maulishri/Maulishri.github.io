@@ -13,7 +13,7 @@ src/data.js
  
 1. Clone the repo
 ```sh
-git clone https://github.com/milanmandal/portfolioMB.git
+git clone https://github.com/Maulishri/Maulishri.github.io.git
 ```
 2. Install NPM packages
 ```sh
