@@ -1,18 +1,18 @@
-
-.about{
+.about {
     height: 100vh;
-    display:flex;
+    display: flex;
 }
 
-.a-title{
+.a-title {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
     /*margin-top:  10%;*/
-    /*color: #*/;
+    /*color: #*/
+    ;
 }
 
-.a-left{
+.a-left {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,8 @@
     justify-content: center;
     /*color: rgb(231, 34, 86);*/
 }
-.a-left-wrapper{
+
+.a-left-wrapper {
     width: 80%;
     height: 80%;
     display: flex;
@@ -29,11 +30,11 @@
     justify-content: space-between;
 }
 
-.a-education{
+.a-education {
     display: flex;
     width: 100%;
     height: 25%;
-    background-color: rgb(207, 25, 73);
+    background-color: rgb(220, 40, 70);
     box-shadow: -5px 5px 30px 1px rgb(46, 46, 46);
     /*color: black;*/
     border-radius: 20px;
@@ -41,14 +42,14 @@
     font-size: 20px;
 }
 
-.a-edu-icon{
+.a-edu-icon {
     flex: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.a-edu-data{
+.a-edu-data {
     flex: 80%;
     display: flex;
     flex-direction: column;
@@ -58,13 +59,14 @@
 }
 
 
-.a-right{
+.a-right {
     flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.a-right-wrapper{
+
+.a-right-wrapper {
     width: 80%;
     height: 80%;
     display: flex;
@@ -74,35 +76,36 @@
 }
 
 
-.a-img{
+.a-img {
     width: 100%;
     object-fit: cover;
 }
 
-.a-icon{
+.a-icon {
     width: 60px;
     height: 60px;
 }
 
 @media screen and (max-width: 1020px) {
-    .a-img{
+    .a-img {
         display: none;
-    }    
+    }
 
-    .a-right{
+    .a-right {
         flex: 0;
     }
 
-    .a-left{
+    .a-left {
         flex: 1;
     }
 
-    .a-left-wrapper{
-        background-image:url('https://www.pinclipart.com/picdir/big/529-5292774_student-graduation-ceremony-silhouette-square-academic-silhouette-clipart.png');
+    .a-left-wrapper {
+        background-image: url('https://www.pinclipart.com/picdir/big/529-5292774_student-graduation-ceremony-silhouette-square-academic-silhouette-clipart.png');
         background-size: cover;
         opacity: 0.8;
     }
-    .a-education{
+
+    .a-education {
         opacity: 0.8;
     }
 
