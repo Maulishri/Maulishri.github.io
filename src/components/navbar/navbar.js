@@ -1,7 +1,7 @@
 import './navbar.css';
 import { Link } from 'react-scroll';
-export default function Navbar(){
-    return(
+export default function Navbar() {
+    return (
         <header className="header">
             <a href="/" className="logo"></a>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -9,22 +9,27 @@ export default function Navbar(){
             <ul className="menu">
                 <li>
                     <Link activeClass="active" smooth spy to="about">
-                        ABOUT ME
+                        About Me
                     </Link>
                 </li>
                 <li>
                     <Link activeClass="active" smooth spy to="education">
-                        EDUCATION
+                        Education
                     </Link>
                 </li>
                 <li>
                     <Link activeClass="active" smooth spy to="project">
-                        PROJECT
+                        Projects
                     </Link>
                 </li>
-                    <li>
+                <li>
                     <Link activeClass="active" smooth spy to="contact">
-                        CONTACT ME
+                        Contact Me
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClass="active">
+
                     </Link>
                 </li>
             </ul>
