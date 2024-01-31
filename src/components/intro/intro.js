@@ -1,7 +1,7 @@
 import React from 'react';
 import './intro.css'
 import { user, contact } from '../../data'
-import Profile from '../../image/profile.jpeg'
+import Profile from '../../image/ProfileGT.jpeg'
 
 let github = "https://img.icons8.com/fluency/2x/github.png"
 let instagram = "https://img.icons8.com/fluency/2x/instagram-new.png"
