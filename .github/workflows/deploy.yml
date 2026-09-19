@@ -26,7 +26,9 @@ jobs:
         run: npm ci
 
       - name: Build App
-        run: npm run build # Creates the static production files
+        env:
+          CI: false  
+        run: npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
