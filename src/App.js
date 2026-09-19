@@ -4,7 +4,7 @@ import { contact, timeline, projects } from "./data";
 import portrait from "./image/profile.jpeg";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const PHRASES = ["systems", "AI", "experiences", "occasional paintings"];
+const PHRASES = ["software that matters", "user-friendly workflows", "technology that helps", "AI systems to ease life", "experiences", "occasional paintings"];
 
 function App() {
   const [phrase, setPhrase] = useState(0);
