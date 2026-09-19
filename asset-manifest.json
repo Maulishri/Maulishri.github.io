@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Maulishri/Maulishri.github.io/static/css/main.76c84af6.css",
-    "main.js": "/Maulishri/Maulishri.github.io/static/js/main.79b29fc6.js",
-    "static/media/profile.jpeg": "/Maulishri/Maulishri.github.io/static/media/profile.cdc20d4034f94732a9a6.jpeg",
-    "index.html": "/Maulishri/Maulishri.github.io/index.html",
-    "main.76c84af6.css.map": "/Maulishri/Maulishri.github.io/static/css/main.76c84af6.css.map",
-    "main.79b29fc6.js.map": "/Maulishri/Maulishri.github.io/static/js/main.79b29fc6.js.map"
+    "main.css": "/static/css/main.76c84af6.css",
+    "main.js": "/static/js/main.721dc763.js",
+    "static/media/profile.jpeg": "/static/media/profile.cdc20d4034f94732a9a6.jpeg",
+    "index.html": "/index.html",
+    "main.76c84af6.css.map": "/static/css/main.76c84af6.css.map",
+    "main.721dc763.js.map": "/static/js/main.721dc763.js.map"
   },
   "entrypoints": [
     "static/css/main.76c84af6.css",
-    "static/js/main.79b29fc6.js"
+    "static/js/main.721dc763.js"
   ]
 }
