@@ -1,93 +1,20 @@
-
-// const github = "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
-// const html = "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-// const linkedIn = "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg"
-const cpp = "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-const python = "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-
-export const user = {
-    "name": "Maulishri Bhandari",
-    "profession": "Student at Georgia Tech",
-    "desc1": "I'm a passionate computer science student with a focus on machine learning, human-computer interaction, and IoT. Currently pursuing a Master of Science in Computer Science at the Georgia Institute of Technology, I'm dedicated to advancing the field of technology through innovation and impactful projects.",
-    "desc2": "I'm excited about the possibilities technology offers to shape the future, and I'm always eager to connect with like-minded professionals and collaborate on projects that make a difference. Let's connect and explore new horizons in the world of building empathetic technology together!",
-    "desc3": "Feel free to browse through my projects on GitHub, my art on Instagram, and my experiences on LinkedIn. Happy to connect!"
-}
-
-export const education = [
-
-    {
-        "year": "2023-2025",
-        "degree": "Masters of Science in Computer Science",
-        "institute": "Georgia Institute of Technology",
-    },
-
-    {
-        "year": "2018-2022",
-        "degree": "Bachelor Of Technology",
-        "institute": "Vellore Institute of Technology",
-    }
-]
-
-
-export const project = [
-    {
-        "id": "1",
-        "img": "https://img.freepik.com/free-vector/flat-online-medical-conference-illustration_23-2148901289.jpg?size=626&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Patient Health Monitoring",
-        "desc": "An attempt to make the patient monitoring system easier given the doctor to patient ratio and unavailability of enough nursing staff",
-        "link": "https://github.com/Maulishri/Patient-Health-Montoring",
-        "tech": cpp
-    },
-
-    {
-        "id": "2",
-        "img": "https://img.freepik.com/free-vector/flat-design-pitbull-pack_23-2148957816.jpg?size=338&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Dog Breed Classification",
-        "desc": "A RNN that identifies the picture of a dog you input. It identifies it as one of the many it has been trained. If the picture you provide is not present in the sets for it has been trained on, It shows the one with closest resemblence.",
-        "link": "https://github.com/Maulishri/Dog-Breed-Classifiacation",
-        "tech": python
-    },
-
-    {
-        "id": "3",
-        "img": "https://img.freepik.com/premium-vector/interpreting-human-gesures-as-commands-gesture-recognition-gestures-commands-handsfree-control_566886-3250.jpg?size=626&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Human_Activity_Recognition",
-        "desc": "A new and computationally cheap method to perform human activity recognition using PoseNet and LSTM. Where we use PoseNet for Preprocessing and LSTM for understand the sequence.",
-        "link": "https://github.com/Maulishri/Human_Activity_Recognition",
-        "tech": python
-    },
-
-    {
-        "id": "4",
-        "img": "https://img.freepik.com/free-vector/human-hand-gestures-set_74855-5874.jpg?size=626&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Hand-Recongnition",
-        "desc": "A program to identify the presence of a human hand and the number of fingers being held up",
-        "link": "https://github.com/Maulishri/Hand-Recognition",
-        "tech": python
-    },
-    {
-        "id": "5",
-        "img": "https://img.freepik.com/free-vector/delivery-bike-online-cartoon-character-send-order-location-sharing-smartphone-smart-city-transportation-concept-flat-vector-illustration_1150-58651.jpg?size=626&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Bike Sharing",
-        "desc": "A neural network to predict daily bike rental ridership from the given dataset. Decions made on the data analysis and visualization results.",
-        "link": "https://github.com/Maulishri/Bike-Sharing",
-        "tech": python
-    },
-    {
-        "id": "6",
-        "img": "https://img.freepik.com/free-vector/compost-cycle-concept-illustration_114360-8733.jpg?size=338&ext=jpg&uid=R86918502&ga=GA1.2.1995763836.1670155431&semt=sph",
-        "title": "Mess-folio",
-        "desc": "It is an optimized way of organization to ensure less wastage of food",
-        "link": "https://github.com/Maulishri/Mess-folio",
-        "tech": python
-    }
-]
-
-export const contact = {
-    "email": "maulishribhandari@gmail.com",
-    "linkedIn": "https://www.linkedin.com/in/maulishri-bhandari-41b172190/",
-    "userID": "maulishri-bhandari-41b172190",
-    "github": "https://github.com/Maulishri",
-    "address": "Atlanta, USA",
-    "instagram": "https://instagram.com/mauli_ed.creations?igshid=YmMyMTA2M2Y="
-}
+export const projects = [
+  { title: "Amazon Rufus", description: "My first experience helping take GenAI beyond a prototype and into production-oriented engineering — with a careful focus on customer experience.", themes: "GenAI · RAG · AWS · Customer experience", art: "context and retrieval", link: null },
+  { title: "CrimeMap Atlanta", description: "An interactive way to make neighborhood crime data legible: people can weigh what matters to them and see a more personal view of place.", themes: "React · Next.js · deck.gl · Data visualization", art: "city signals", link: "https://github.com/Maulishri" },
+  { title: "RAG Assistant", description: "A practical enterprise AI pattern for getting the right knowledge to the right person, with retrieval as a first-class part of the experience.", themes: "LLMs · Retrieval · Architecture · Evaluation", art: "question and answer", link: "https://github.com/Maulishri" },
+  { title: "I Sea", description: "A creative exploration of how a carefully designed interface can make information feel less like a system and more like an invitation.", themes: "Product thinking · Interface design · Storytelling", art: "look and discover", link: "https://github.com/Maulishri" }
+];
+export const timeline = [
+  { id: "amazon-checkout", date: "2025—now", sortOrder: 202506, title: "Amazon Checkout", role: "Software Development Engineer", description: "Building customer-facing systems where reliability, clarity, and latency matter — because the invisible parts of a product are often the ones users feel most.", tags: ["Distributed systems", "Reliability", "Latency", "AWS"] },
+  { id: "georgia-tech", date: "2023—May 2025", sortOrder: 202503, title: "Georgia Tech", role: "MS Computer Science · Teaching Assistant", description: "Graduate school expanded my lens: machine learning, visualization, HCI, and teaching all offered different ways to understand the person behind a system.", tags: ["ML", "Visualization", "HCI", "Computer vision"] },
+  { id: "williamson", date: "Apr 2025", sortOrder: 202504, title: "Marshall D. Williamson Fellowship", role: "Georgia Institute of Technology", description: "Recognized by Georgia Tech as a well-rounded second-year master’s student demonstrating academic excellence and leadership.", tags: ["Leadership", "Academic excellence"], sideQuest: true },
+  { id: "rufus", date: "May—Aug 2024", sortOrder: 202405, title: "Amazon Rufus", role: "Software Engineering · GenAI / RAG", description: "My first experience taking GenAI beyond a prototype and into production-oriented engineering, where quality and customer trust both matter.", tags: ["GenAI", "RAG", "AWS", "Customer experience"] },
+  { id: "jackson", date: "Apr 2024", sortOrder: 202404, title: "Donald V. Jackson Fellowship", role: "Georgia Institute of Technology", description: "Recognized by Georgia Tech for all-round excellence across leadership and academics.", tags: ["Leadership", "Academics"], sideQuest: true },
+  { id: "jpmorgan", date: "2022—23", sortOrder: 202201, title: "JPMorgan Chase", role: "Software Engineer · Global Risk Technology", description: "Built software and analytics for global wealth management, learning how resilient data systems make better decisions possible at scale.", tags: ["Java", "GraphQL", "Python", "AWS"] },
+  { id: "vit", date: "2018—22", sortOrder: 201808, title: "Vellore Institute of Technology", role: "ECE · IoT & sensors · early projects", description: "I started with sensors, embedded systems, and the satisfying feeling of making something respond to the physical world.", tags: ["IoT", "Embedded systems", "Curiosity"] },
+  { id: "ghc", date: "2021", sortOrder: 202107, title: "Grace Hopper Scholar", role: "AnitaB.org", description: "A formative opportunity to join a global community of women in computing and see a larger future for myself in technology.", tags: ["Community", "Women in computing"], sideQuest: true },
+  { id: "techgig", date: "2020", sortOrder: 202001, title: "TechGig Geek Goddess semi-finalist", role: "Top 0.98% globally", description: "An early reminder that curiosity and consistent practice can open doors beyond the classroom.", tags: ["Problem solving", "Early career"], sideQuest: true },
+  { id: "kpmg", date: "Early career", sortOrder: 201900, title: "KPMG", role: "Technology and consulting", description: "An early view of how technology can support complex organizations, and why translating needs into useful systems is its own craft.", tags: ["Collaboration", "Product context", "Communication"] },
+  { id: "creative", date: "Always", sortOrder: 201800, title: "Making room to make", role: "Painting · soccer · dance · running", description: "The things that don’t fit neatly into a job title still matter. They keep me observant, collaborative, and interested in the world outside the terminal.", tags: ["Painting", "Soccer", "Dance", "Books"], sideQuest: true }
+];
+export const contact = { email: "maulishribhandari@gmail.com", linkedIn: "https://www.linkedin.com/in/maulishri-bhandari-41b172190/", github: "https://github.com/Maulishri" };

@@ -1,36 +1,28 @@
-import React, { useContext } from 'react';
-import Navbar from './components/navbar/navbar.js';
-import Intro from "./components/intro/intro.js"
-import About from "./components/about/about.js"
-import Product from "./components/productList/productList.js"
-import Contact from "./components/contact/contact.js"
-import Toggle from './components/toggle/toggle.js';
-import { ThemeContext } from './context.js';
-// import {Scrollbars} from 'react-custom-scrollbars-2';
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import { contact, timeline, projects } from "./data";
+import portrait from "./image/profile.jpeg";
 
-const App=()=> {
-  const theme = useContext(ThemeContext);
-  console.log(theme);
-  const darkMode = theme.state.darkMode;
-  return (
-      <div 
-      className='main'
-          style={
-            {
-              backgroundColor : darkMode? '#222' : 'white', 
-              color: darkMode? 'white' : 'black' ,
-              transition: 'all 0.5s ease'
-            }
-          }
-      >
-        <Navbar/>
-        <section id="about" ><Intro/></section>
-        <section id="education" ><About/></section> 
-        <section id="project" ><Product/></section>
-        <section id="contact" ><Contact/></section>
-        <Toggle/> 
-      </div>
-  );
-};
+const Arrow = () => <span aria-hidden="true">↗</span>;
+const PHRASES = ["systems", "AI", "experiences", "occasional paintings"];
+
+function App() {
+  const [phrase, setPhrase] = useState(0);
+  const [recruiterView, setRecruiterView] = useState(false);
+  const [activeEntry, setActiveEntry] = useState("amazon-checkout");
+  useEffect(() => { const timer = window.setInterval(() => setPhrase((current) => (current + 1) % PHRASES.length), 2600); return () => window.clearInterval(timer); }, []);
+  const visibleTimeline = [...timeline]
+    .sort((a, b) => b.sortOrder - a.sortOrder)
+    .filter((item) => !recruiterView || ["amazon-checkout", "rufus", "jpmorgan", "georgia-tech"].includes(item.id));
+  return <main>
+    <nav className="nav" aria-label="Main navigation"><a className="wordmark" href="#top">MB<span>·</span></a><div className="nav-links"><a href="#work">Work</a><a href="#journey">Journey</a><a href="#notes">Notes</a><a className="nav-contact" href="#contact">Let’s talk <Arrow /></a></div></nav>
+    <section className="hero" id="top"><div className="eyebrow"><i /> Software engineer · Seattle</div><div className="hero-grid"><h1>I build technology<br />people can <em>actually</em> use.</h1><div className="hero-aside"><img className="portrait" src={portrait} alt="Maulishri Bhandari" /><p>I’m Maulishri — an engineer drawn to the space where thoughtful systems, useful AI, and human needs meet.</p><a className="text-link" href="#work">Explore selected work <Arrow /></a></div></div><div className="hero-footer"><p>Currently <strong>Software Development Engineer at Amazon</strong><br />Previously Amazon Rufus · JPMorgan · KPMG</p><p>MS Computer Science<br /><strong>Georgia Institute of Technology</strong></p><div className="builds">I build <span key={phrase}>{PHRASES[phrase]}</span>.</div></div></section>
+    <section className="intro-rule"><p>Not a technology list. A body of work built around clear thinking, real constraints, and the people on the other side of the screen.</p></section>
+    <section className="section capabilities" id="capabilities"><div className="section-label">01 / What I build</div><div className="section-heading"><h2>Engineering with a point of view.</h2><p>From production services to exploratory interfaces, I like taking something complicated and making it feel inevitable.</p></div><div className="capability-grid"><article><span>01</span><h3>Scalable software</h3><p>Backend systems, APIs, distributed workflows, and customer-facing services designed for the details that matter.</p><small>Java · Python · Spring Boot · AWS · SQL</small></article><article><span>02</span><h3>Practical AI</h3><p>Retrieval, GenAI applications, and AI-powered experiences grounded in how people actually work.</p><small>RAG · LLMs · Retrieval · Evaluation</small></article><article><span>03</span><h3>Human-centered products</h3><p>Interfaces and visualizations that help people see, understand, and decide with confidence.</p><small>React · Next.js · deck.gl · UX</small></article></div></section>
+    <section className="section work" id="work"><div className="section-label">02 / Selected work</div><div className="section-heading"><h2>Things I’ve made<br />matter in the world.</h2><p>Every project starts with a problem worth making smaller, clearer, or more possible.</p></div><div className="project-list">{projects.map((project, index) => <article className={`project project-${index + 1}`} key={project.title}><div className="project-number">0{index + 1}</div><div className="project-copy"><div><h3>{project.title}</h3></div><p>{project.description}</p><div className="project-meta"><span>{project.themes}</span>{project.link && <a href={project.link} target="_blank" rel="noreferrer">View project <Arrow /></a>}</div></div><div className="project-art" aria-label={project.art}><div className="art-label">{project.art}</div><div className="art-shape one" /><div className="art-shape two" /><div className="art-shape three" /></div></article>)}</div></section>
+    <section className="section timeline-section" id="journey"><div className="section-label">03 / The long view</div><div className="section-heading timeline-title"><h2>A work in<br /><em>progress.</em></h2><p>A timeline of the things I’ve built, learned, taught, broken, and occasionally painted.</p></div><div className="timeline-controls"><p>My professional path, with room for the useful detours.</p><button className={recruiterView ? "view-switch on" : "view-switch"} onClick={() => setRecruiterView(!recruiterView)} aria-pressed={recruiterView}><span /> Recruiter view</button></div><div className="timeline">{visibleTimeline.map((item) => <article className={`timeline-item ${activeEntry === item.id ? "active" : ""} ${item.sideQuest ? "side-quest" : ""}`} key={item.id}><button onClick={() => setActiveEntry(activeEntry === item.id ? "" : item.id)} aria-expanded={activeEntry === item.id}><time>{item.date}</time><span className="dot" /><div className="timeline-summary"><h3>{item.title}</h3><p>{item.role}</p></div><span className="plus">{activeEntry === item.id ? "−" : "+"}</span></button>{activeEntry === item.id && <div className="timeline-detail"><p>{item.description}</p><div>{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>}</article>)}{!recruiterView && <article className="timeline-item future"><div><time>Next</time><span className="dot" /><div className="timeline-summary"><h3>Still becoming.</h3><p>Curious about what’s useful, difficult, and worth building next.</p></div></div></article>}</div></section>
+    {!recruiterView && <><section className="section principles"><div className="section-label">04 / How I think</div><h2>Good engineering is<br />a form of <em>empathy.</em></h2><div className="principle-grid"><p><strong>Start with the human.</strong> Who is actually experiencing the system?</p><p><strong>Make complexity disappear.</strong> The best architecture is often the one a user never notices.</p><p><strong>Measure what matters.</strong> Latency, reliability, adoption, time saved.</p><p><strong>Make it understandable.</strong> If I can’t explain it clearly, I probably don’t understand it well enough.</p></div></section><section className="section notes" id="notes"><div className="section-label">05 / Writing & speaking</div><div className="notes-grid"><h2>Ideas are better when they travel.</h2><div><p>I care about making technical ideas approachable — whether that’s in a conversation, a classroom, or a future talk.</p><a className="text-link" href={contact.linkedIn} target="_blank" rel="noreferrer">Find me on LinkedIn <Arrow /></a><p className="quiet">Topics I’m exploring: production GenAI · retrieval systems · data visualization · engineering for people</p></div></div></section><section className="beyond"><div className="beyond-copy"><div className="section-label">06 / Beyond code</div><h2>I don’t only<br />build software.</h2><p>Painting, soccer, dance, running, books, and long walks in new places all shape the way I see a problem. Soccer taught me teamwork before I knew what software engineering was.</p></div><div className="interests"><span>Paint</span><span>Play</span><span>Move</span><span>Read</span><span>Wander</span></div></section></>}
+    <footer id="contact"><div><p className="section-label">Let’s make something useful</p><h2>Have a good<br />problem?</h2></div><div className="footer-links"><a href={`mailto:${contact.email}`}>{contact.email} <Arrow /></a><a href={contact.linkedIn} target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href={contact.github} target="_blank" rel="noreferrer">GitHub <Arrow /></a></div><p className="copyright">© {new Date().getFullYear()} Maulishri Bhandari<br />Built with care, curiosity, and good coffee.</p></footer>
+  </main>;
+}
 export default App;
